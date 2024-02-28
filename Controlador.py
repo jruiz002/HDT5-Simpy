@@ -4,10 +4,10 @@ import csv
 
 # Variables de clase
 env = simpy.Environment() # Se levanta un ambiente environment
-cpu = simpy.Resource(env, capacity=2)  # Un solo CPU con capacidad de ejecutar un proceso a la vez.
+cpu = simpy.Resource(env, capacity=1)  # Un solo CPU con capacidad de ejecutar un proceso a la vez.
 RAM = simpy.Container(env, init=100, capacity=100) # Creación de la RAM
 random.seed(42)
-INTERVAL = 1 # Intervalo
+INTERVAL = 10 # Intervalo
 lista_procesos = [] # Se inicializa la lista para almacenar los procesos
 
 class Proceso:
